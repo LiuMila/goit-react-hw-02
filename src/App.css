@@ -1,42 +1,88 @@
-#root {
-  max-width: 1280px;
+
+/* Загальні стилі для сторінки */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Стилі для кнопок */
+button {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+/* Додаткові стилі для кнопки Reset */
+button.reset {
+  background-color: #ff6347;
+  color: white;
+}
+
+button.reset:hover {
+  background-color: #ff4500;
+}
+
+/* Стилі для секції з результатами */
+.feedback-summary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-summary p {
+  margin: 5px 0;
+}
+
+.positive-feedback {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.negative-feedback {
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.neutral-feedback {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+/* Центрування всього додатка */
+.app-container {
+  max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
