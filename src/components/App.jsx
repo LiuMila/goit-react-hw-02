@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import {Description} from './Description/Description.jsx';
-import  Options  from './Options/Options.jsx';
-import { Feedback } from './Feedback/Feedback.jsx';
-import  Notification from './Notification/Notification.jsx';
+import { Description } from './Description/Description';
+import { Options }  from './Options/Options';
+import { Feedback } from './Feedback/Feedback';
+import { Notification } from './Notification/Notification';
+import './App.styled.css';
 
 
 const App = () => {
@@ -31,12 +32,13 @@ const App = () => {
   return (
     <div>
       <Description />
+      <Options updateFeedback={updateFeedback} totalFeedback={totalFeedback} />
       {totalFeedback === 0 ? (
         <Notification message="No feedback given yet" />
       ) : (
         <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />
       )}
-      <Options updateFeedback={updateFeedback} totalFeedback={totalFeedback} />
+      
     </div>
   );
 };
